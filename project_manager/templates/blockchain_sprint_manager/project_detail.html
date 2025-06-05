@@ -1,0 +1,10 @@
+{% extends 'blockchain_sprint_manager/base.html' %}
+{% block title %}Project Details{% endblock %}
+{% block content %}
+<h2>{{ project.project_name }}</h2>
+<p><strong>Description:</strong> {{ project.project_description }}</p>
+<p><strong>Start:</strong> {{ project.project_start }}</p>
+<p><strong>End:</strong> {{ project.project_end }}</p>
+<p><strong>Status:</strong> {{ project.completed|yesno:"Completed,In Progress" }}</p>
+<a href="{% url 'project_list' %}">⬅ Back to Projects</a>
+{% endblock %}

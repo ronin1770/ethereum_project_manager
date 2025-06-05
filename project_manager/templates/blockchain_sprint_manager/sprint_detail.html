@@ -1,0 +1,10 @@
+{% extends 'blockchain_sprint_manager/base.html' %}
+{% block title %}Sprint Details{% endblock %}
+{% block content %}
+<h2>Sprint {{ sprint.id }}</h2>
+<p><strong>Description:</strong> {{ sprint.sprint_description }}</p>
+<p><strong>Start:</strong> {{ sprint.sprint_start }}</p>
+<p><strong>End:</strong> {{ sprint.sprint_end }}</p>
+<p><strong>Progress:</strong> {{ sprint.total_completed }}/{{ sprint.total_items }}</p>
+<a href="{% url 'sprint_list' %}">⬅ Back to Sprints</a>
+{% endblock %}

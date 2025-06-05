@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Dashboard</title>
+</head>
+<body>
+    <h1>Project Dashboard</h1>
+    <ul>
+        {% for project in projects %}
+            <li>{{ project.project_name }} – {{ project.project_start }}</li>
+        {% empty %}
+            <li>No projects found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{% extends 'blockchain_sprint_manager/base.html' %}
+{% block title %}Sprints{% endblock %}
+{% block content %}
+<h2>Sprints</h2>
+<ul>
+    {% for sprint in sprints %}
+        <li><a href="{% url 'sprint_detail' sprint.id %}">Sprint {{ sprint.id }} (Project {{ sprint.project_id }})</a></li>
+    {% empty %}
+        <li>No sprints found.</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'sprint_create' %}">➕ Create New Sprint</a>
+{% endblock %}
